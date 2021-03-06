@@ -14,6 +14,8 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
+#if !defined(BSD)
+
 #include "strl.h"
 
 /*
@@ -76,3 +78,5 @@ size_t strlcat(char *dst, const char *src, size_t dsize) {
 
 	return (dlen + (src - osrc)); /* count does not include NUL */
 }
+
+#endif
